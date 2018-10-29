@@ -1,0 +1,44 @@
+html
+    head
+        title RSVP Form
+        link(rel="stylesheet" type="text/css" media="screen" href="style.css")
+    body
+        form(method="POST", action="/rsvp", id="postForm")
+            fieldset
+                legend RSVP
+                    
+                label(for="fullName") Full Name: 
+                input(type="text", name="name", id="fullName")
+
+                br
+
+                label(for="email") Email: 
+                input(type="email", name="email", id="email")
+
+            fieldset
+                legend Are you attending?
+                
+                input(type="radio", name="attending", id="yes", value="yes", checked)
+                label(for="yes") I am attending
+
+                br
+
+                input(type="radio", name="attending", id="no", value="no")
+                label(for="no") I will not be attending
+
+            fieldset
+                legend Number of Guests
+                
+                select(name="numGuests", id="numGuests")
+                    option(value=0, selected) I will be attending alone
+                    option(value=1) 1
+                    option(value=2) 2
+                    option(value=3) 3
+                    option(value=4) 4
+                    option(value=5) 5
+                    option(value=6) 6
+                    option(value=7) 7
+                    option(value=8) 8
+
+            div
+                button(type="submit", class="button") Submit
