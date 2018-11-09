@@ -17,7 +17,7 @@ const resSchema = new Schema ({
     name: String,
     email: String,
     attending: String,
-    guest: Number
+    guests: Number
 });
 
 const Response = mongoose.model("Response", resSchema);
@@ -47,7 +47,7 @@ app.post("/rsvp", function(req, res) {
         name: req.body.name,
         email: req.body.email,
         attending: req.body.attending,
-        guest: req.body.guest
+        guests: req.body.guests
     });
     userRes.save(function (err, userRes) {
         if (err) return console.error(err);

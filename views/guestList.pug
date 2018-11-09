@@ -7,7 +7,10 @@ html
             ul Attending
                 each guest in userRes
                     if guest.attending === "yes"
-                        li= guest.name
+                        if guest.guests !== 0
+                            li= `${guest.name} (with ${guest.guests} guests)`
+                        else
+                            li= `${guest.name} (with no guests)`
             ul Not Attending
                 each guest in userRes
                     if guest.attending === "no"
