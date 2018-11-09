@@ -17,7 +17,7 @@ const resSchema = new Schema ({
     name: String,
     email: String,
     attending: String,
-    guests: Number
+    guest: Number
 });
 
 const Response = mongoose.model("Response", resSchema);
